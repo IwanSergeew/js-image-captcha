@@ -19,19 +19,21 @@ Captcha with images for protecting forms from bots.
     ...
   </form>
   ...
-  const captcha = new Captcha({
-      id: 'captcha',
-      width: 300,
-      height: 100
-  });
+  <script>
+    const captcha = new Captcha({
+        id: 'captcha',
+        width: 300,
+        height: 100
+    });
 
-  const someForm = document.getElementById('someForm');
-  someForm.addEventListener('submit', (e) => {
-      if(!captcha.isValid()) {
-          e.preventDefault();
-          alert('Capcha not valid.');
-      }
-  })
+    const someForm = document.getElementById('someForm');
+    someForm.addEventListener('submit', (e) => {
+        if(!captcha.isValid()) {
+            e.preventDefault();
+            alert('Capcha not valid.');
+        }
+    });
+  </script>
 </body>
 ```
 
