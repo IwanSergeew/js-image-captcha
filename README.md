@@ -21,9 +21,7 @@ Captcha with images for protecting forms from bots.
   ...
   <script>
     const captcha = new Captcha({
-        id: 'captcha',
-        width: 300,
-        height: 100
+        id: 'captcha'
     });
 
     const someForm = document.getElementById('someForm');
