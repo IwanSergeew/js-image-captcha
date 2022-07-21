@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script src="assets/js/captcha.js"></script>
+        <link rel="stylesheet" href="assets/css/style.css">
+    </head>
+    <body>
+        <form id="someForm" action="" method="POST">
+            <div id="captcha" class="captcha"></div>
+            <input type="text" id="captchaInput"></input>
+            <button type="submit" id="formSubmit">Submit</button>
+        </form>
+            
+        <script>
+            const captcha = new Captcha({
+                id: 'captcha',
+                width: 300,
+                height: 100
+            });
+
+            const someForm = document.getElementById('someForm');
+            someForm.addEventListener('submit', (e) => {
+                if(!captcha.isValid()) {
+                    e.preventDefault();
+                    alert('Capcha not valid.');
+                }
+            })
+        </script>
+    </body>
+</html>
