@@ -87,3 +87,10 @@
     display: flex;
     justify-content: flex-end;
 }
+
+.captcha-modal .close-btn {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    cursor: pointer;
+}

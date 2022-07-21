@@ -91,6 +91,11 @@ class Captcha {
         this.modal.classList = 'captcha-modal';
         this.modal.id = 'captchaModal';
 
+        const closeBtn = document.createElement('label');
+        closeBtn.innerHTML = 'X';
+        closeBtn.classList = 'close-btn';
+        closeBtn.addEventListener('click', (e) => this.modal.remove());
+
         const modalHead = document.createElement('div');
         modalHead.classList = 'modal-head';
 
@@ -130,6 +135,7 @@ class Captcha {
         this.modal.append(modalHead);
         this.modal.append(modalBody);
         this.modal.append(modalFoot);
+        this.modal.append(closeBtn);
         document.body.append(this.modal);
     }
 
